@@ -1,5 +1,5 @@
 #Description
-Test application - it shows how to use rxjs and routing.
+Test application - it shows how to use rxjs and routing and modal.
 
 # MyAngularApp
 
