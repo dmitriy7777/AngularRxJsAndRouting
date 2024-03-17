@@ -1,0 +1,12 @@
+<div class="modal" *ngIf="show">
+  <div class="modal-content" *ngIf="imageLoaded">
+    <span class="close" (click)="close()">&times;</span>
+    <div class="modal-text">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+    <div class="modal-image">
+      <img [src]="imageUrl" alt="Image description" class="fixed-size-image">
+    </div>
+  </div>
+</div>

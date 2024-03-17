@@ -1,0 +1,59 @@
+.fixed-size-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Это свойство гарантирует, что изображение будет заполнять элемент, сохраняя свои пропорции */
+}
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: flex; /* используем flexbox для выравнивания элементов */
+  align-items: center; /* центрируем элементы по вертикали */
+  justify-content: center; /* центрируем элементы по горизонтали */
+}
+
+.modal-text {
+  margin-right: 20px; /* добавляем отступ справа от текста */
+}
+
+.modal-image {
+  max-width: 200px; /* устанавливаем максимальную ширину для изображения */
+  max-height: 200px; /* устанавливаем максимальную высоту для изображения */
+  object-fit: cover; /* обрезаем изображение, чтобы оно заполняло элемент */
+}
+
+
+.close {
+  position: absolute;
+  top: 10px; /* Расстояние от верхнего края контейнера */
+  right: 10px; /* Расстояние от правого края контейнера */
+  cursor: pointer;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="data; else loading" class="scrollable-container">
+  <div *ngFor="let post of data; let i = index"
+       class="post-item"
+       [class.selected]="selectedPostIndex === i"
+       (click)="selectPost(i)"
+       (mouseover)="hover = true"
+       (mouseout)="hover = false">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
+
+<app-post-details-modal
+  [post]="selectedPost"
+  [show]="showModal"
+  [imageUrl]="moreData"
+  [imageLoaded]="imageLoaded"
+  (onClose)="closeModal()">
+</app-post-details-modal>
+
+<ng-template #loading>
+  <p>Loading posts...</p>
+</ng-template>
